@@ -20,11 +20,13 @@ var (
 )
 
 func main() {
-	http.HandleFunc("/posts", postsHandler)
-	http.HandleFunc("/posts/", postHandler)
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("/posts", postsHandler)
+	mux.HandleFunc("/posts/", postHandler)
 
 	fmt.Println("Server running at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", mux))
 }
 
 func postsHandler(w http.ResponseWriter, r *http.Request) {
