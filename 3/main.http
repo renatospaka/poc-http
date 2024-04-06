@@ -1,0 +1,10 @@
+GET http://localhost:8090/foo HTTP/1.1
+
+###
+GET http://localhost:8090/bar HTTP/1.1
+
+###
+GET http://localhost:8090/baz HTTP/1.1
+
+###
+POST http://localhost:8090/foobar HTTP/1.1
