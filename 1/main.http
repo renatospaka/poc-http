@@ -1,0 +1,4 @@
+GET http://localhost:8090/path HTTP/1.1
+
+###
+GET http://localhost:8090/task/3 HTTP/1.1
